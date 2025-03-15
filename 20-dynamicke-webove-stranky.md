@@ -571,7 +571,7 @@ if ('serviceWorker' in navigator) {
 }
 ```
 
-### Servřové API a mikroslužby
+### Serverové API a mikroslužby
 
 ```javascript
 // REST API v Express.js (Node.js)
