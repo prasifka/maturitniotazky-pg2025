@@ -1,4 +1,4 @@
-# maturitní otázky z programování
+# Maturitní otázky z programování
 
 # Obsah
 
@@ -28,7 +28,7 @@
 | 22 | [Procesy v Unixu](22-procesy-unix.md) |
 | 23 | [Uživatelé v Unixu](23-uzivatele-unix.md) |
 | 24 | [Práce s textem v Unixu](24-prace-s-textem-unix.md) |
-| 25 | [Shell a programování v shellu](25-shell-programovani.md) |
+| 25 | [Shell a programování v shellu](25-shell-programovani-v-shellu.md) |
 
 ## Licence
 

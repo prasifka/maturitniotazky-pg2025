@@ -1,4 +1,4 @@
-# Statické webové stránky
+# 18. Statické webové stránky
 
 ## Značkovací jazyky
 
