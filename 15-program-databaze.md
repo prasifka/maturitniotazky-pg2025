@@ -11,7 +11,7 @@
 
 ## Spojení do databáze
 
-Spojení do databáze je prvním krokem při práci s databází v aplikaci. Nejčastěji se používá JDBC v Javě nebo obdobné knihovny v jiných jazycích.
+Spojení do databáze je prvním krokem při práci s databází v aplikaci. Program zůstává stejný i při změně databáze. Nejčastěji se používá JDBC v Javě nebo obdobné knihovny v jiných jazycích.
 
 ### JDBC (Java Database Connectivity)
 
@@ -173,7 +173,7 @@ class JdbcUserDAO implements UserDAO {
 
 ## Objektově relační mapování (ORM)
 
-ORM převádí data mezi relační databází a objektově orientovaným programováním.
+ORM převádí data mezi relační databází a objektově orientovaným programováním. Interpretace: Model, Třída = Tabulka, Objekty = Řádky
 
 ### Výhody ORM
 - Zjednodušuje přístup k datům
