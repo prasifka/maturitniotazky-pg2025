@@ -120,6 +120,8 @@ Metaznaky jsou speciální znaky, které shell interpretuje speciálním způsob
 | `[a-z]` | Jeden znak z uvedeného rozsahu (a až z) |
 | `[!abc]` | Jeden znak, který není v uvedené množině |
 
+rozdíl mezi zástupnými znaky a regulárními výrazy je, že zástupné znaky se aplikují na soubory ale regulérní výrazy pracují s textem
+
 Příklady:
 ```bash
 # Všechny soubory s příponou .txt
