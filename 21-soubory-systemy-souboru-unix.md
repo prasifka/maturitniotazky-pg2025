@@ -130,11 +130,16 @@ RAID je technologie, která kombinuje více fyzických disků do jedné logické
 
 ### Základní úrovně RAID
 
-#### RAID 0 (Striping - Proužkování)
-- Data jsou rozdělena na bloky a zapisována střídavě na všechny disky
+#### RAID 0 
+(Striping - Proužkování)
+- Data jsou rozdělena na bloky a zapisována střídavě na všechny disky (Disky v řadě)
 - Výhody: Zvýšení rychlosti čtení/zápisu, využití plné kapacity všech disků
 - Nevýhody: Žádná redundance - při selhání jednoho disku jsou ztracena všechna data
 - Minimální počet disků: 2
+
+(Concat)
+- Skládání disku za sebe
+- Virtuálně větší disk
 
 #### RAID 1 (Mirroring - Zrcadlení)
 - Data jsou duplikována na dva nebo více disků
@@ -147,13 +152,14 @@ RAID je technologie, která kombinuje více fyzických disků do jedné logické
 - Paritní informace jsou rovnoměrně rozloženy na všech discích
 - Výhody: Dobrý poměr výkonu a redundance, přežije výpadek jednoho disku
 - Nevýhody: Pomalejší zápis kvůli výpočtu parity
+- Kapacita - (n-1) nejmenšího disku
 - Minimální počet disků: 3
 
 #### RAID 6 (Striping with Double Parity)
 - Podobný RAID 5, ale s dvojitou paritou
 - Výhody: Přežije výpadek až dvou disků současně
 - Nevýhody: Ještě pomalejší zápisy než RAID 5
-- Minimální počet disků: 4
+- Minimální počet disků: 4 (výhodný až od 6, protože na 4 je lepší mirroing - proč dva paritní na 4?)
 
 ### Kombinované RAID úrovně
 
@@ -245,6 +251,7 @@ Při výpisu `ls -l` je typ souboru zobrazen jako první znak v právech:
 
 6. **Pojmenovaná roura (`p`)**
    - Speciální soubor pro komunikaci mezi procesy (FIFO)
+   - Teoreticky má neomezenou paměť (technické a i-node omezení)
    - Také nazýván "pipe" nebo "pajpa"
 
 7. **Socket (`s`)**
