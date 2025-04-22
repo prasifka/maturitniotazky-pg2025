@@ -1,5 +1,16 @@
 # 18. Statické webové stránky
 
+## Obsah
+ - Značkovací jazyky
+ - HTML dokument, element a atribut
+ - Struktura HTML dokumentu
+ - Párové a Nepárové značky
+ - Připojení dalších dokumentů
+ - Hypertext
+ - Vložené dokumenty a objekty
+ - Obrázkové mapy
+ - Výhody a omezení statických webových stránek
+
 ## Značkovací jazyky
 
 Značkovací jazyky slouží k strukturování a formátování dokumentů. Na rozdíl od programovacích jazyků nepopisují algoritmy, ale způsob, jakým má být obsah zobrazen nebo strukturován.

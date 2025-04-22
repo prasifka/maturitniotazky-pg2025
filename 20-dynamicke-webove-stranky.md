@@ -1,5 +1,17 @@
 # 20. Dynamické webové stránky
 
+## Obsah
+ - Skriptovací jazyky pro webové aplikace
+ - Vložení skriptu do HTML
+ - Aktivace skriptu
+ - Interaktivní uživatelské rozhraní
+ - Datové typy a správa paměti
+ - Knihovny a frameworky
+ - Generování dynamického obsahu
+ - Zpracování dat formuláře
+ - Relace
+ - Uživatelské přizpůsobení
+
 Dynamické webové stránky umožňují interaktivitu a personalizaci obsahu na základě akcí uživatele, na rozdíl od statických stránek, které zobrazují vždy stejný obsah.
 
 ## Skriptovací jazyky pro webové aplikace
