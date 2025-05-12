@@ -32,6 +32,9 @@
   - Data
   - Heap
   - Systémové zdroje (otevřené soubory, síťová spojení)
+- Běh
+  1. Paralelně - Jedno jádro zpracovává jedno vlákno
+  2. Konkurentně - Na jednom jádře se velice rychle vlákna střídají
 
 ### Monitor
 - **Monitor** je synchronizační mechanismus, který umožňuje vláknům vzájemně výlučný přístup ke sdíleným zdrojům
