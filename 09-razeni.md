@@ -6,7 +6,6 @@
 - Přímé metody řazení
 - Řazení pomocí haldy (Heap Sort)
 - Rekurzivní řadící algoritmy
-- Algoritmy s lineární složitostí
 - Efektivita a složitost řadících algoritmů
 - Vhodné užití a příklady
 
