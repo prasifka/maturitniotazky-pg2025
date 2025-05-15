@@ -37,9 +37,6 @@
 - Bubble Sort
 - Insertion Sort
 - Merge Sort
-- Counting Sort
-- Radix Sort
-- Bucket Sort
 
 ### Nestabilní algoritmy
 - Selection Sort (standardně, lze upravit na stabilní)
@@ -324,63 +321,6 @@ Vlastnosti:
 - Vhodný pro řazení spojových seznamů
 - Efektivní pro vnější řazení velkých datových souborů
 
-## Algoritmy s lineární složitostí
-
-### Radix Sort (Přihrádkové řazení)
-Princip:
-1. Řadíme čísla podle jednotlivých řádů (jednotky, desítky, stovky, ...) od nejnižšího k nejvyššímu
-2. Pro každý řád použijeme stabilní řazení (typicky Counting Sort)
-
-Omezení:
-- Použitelný pouze pro celá čísla
-- Hodnoty musí být z předem známého, ne příliš velkého rozmezí
-
-```java
-void radixSort(int[] arr) {
-    // Nalezení maximální hodnoty pro určení počtu průchodů
-    int max = Arrays.stream(arr).max().getAsInt();
-    
-    // Řazení podle každého řádu
-    for (int exp = 1; max / exp > 0; exp *= 10) {
-        countingSortByDigit(arr, exp);
-    }
-}
-
-void countingSortByDigit(int[] arr, int exp) {
-    int n = arr.length;
-    int[] output = new int[n];
-    int[] count = new int[10]; // 0-9 číslic
-    
-    // Inicializace počítacího pole
-    Arrays.fill(count, 0);
-    
-    // Počítání výskytů číslic
-    for (int i = 0; i < n; i++) {
-        count[(arr[i] / exp) % 10]++;
-    }
-    
-    // Kumulativní počty
-    for (int i = 1; i < 10; i++) {
-        count[i] += count[i - 1];
-    }
-    
-    // Vytvoření výstupního pole
-    for (int i = n - 1; i >= 0; i--) {
-        output[count[(arr[i] / exp) % 10] - 1] = arr[i];
-        count[(arr[i] / exp) % 10]--;
-    }
-    
-    // Kopírování seřazeného pole
-    System.arraycopy(output, 0, arr, 0, n);
-}
-```
-
-Vlastnosti:
-- Časová složitost: O(d * (n + k)), kde d je počet řádů, n je počet prvků a k je rozsah hodnot
-- Stabilní
-- Vyžaduje dodatečnou paměť
-- Efektivní pro celá čísla s omezeným počtem řádů
-
 ## Efektivita a složitost řadících algoritmů
 
 | Algoritmus | Průměrná složitost | Nejhorší složitost | Paměťová náročnost | Stabilita |
@@ -391,7 +331,6 @@ Vlastnosti:
 | Heap Sort | O(n log n) | O(n log n) | O(1) | Nestabilní |
 | Quick Sort | O(n log n) | O(n²) | O(log n) | Nestabilní |
 | Merge Sort | O(n log n) | O(n log n) | O(n) | Stabilní |
-| Radix Sort | O(d * (n + k)) | O(d * (n + k)) | O(n + k) | Stabilní |
 
 ## Vhodné užití a příklady
 
@@ -418,7 +357,3 @@ Vlastnosti:
 ### Merge Sort
 - Vhodný pro: spojové seznamy, vnější řazení, paralelní zpracování
 - Příklad: Řazení velkých souborů dat na disku, paralelní algoritmy
-
-### Radix Sort
-- Vhodný pro: celá čísla s omezeným počtem číslic, řetězce stejné délky
-- Příklad: Řazení identifikačních čísel, poštovních směrovacích čísel
